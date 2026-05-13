@@ -21,7 +21,9 @@
 
 ## Maintainer content
 
-- [content/blog/](content/blog/) — Frutero Club blog drafts (build-in-public). Canonical location for published/publishable artifacts. Work tracked in `workstreams/v0.1.0-launch-content/`.
+- [content/blog/](content/blog/) — Frutero Club blog drafts (build-in-public, dated posts). Canonical location for time-stamped pieces.
+- [content/handbook/](content/handbook/) — Living manuals. Currently: [Manual de Frutero Agency (ES)](content/handbook/frutero-agency-handbook.es.md).
+- Work surrounding both is tracked in `workstreams/v0.1.0-launch-content/`.
 
 ## Workstreams
 

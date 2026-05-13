@@ -1,9 +1,49 @@
+# OS
 .DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
 *.swp
-*.tmp
-node_modules/
+*.swo
+*~
+
+# Env / secrets
 .env
 .env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+credentials.json
+
+# Logs / caches / tmp
+*.log
+*.tmp
+.cache/
+.tmp/
+tmp/
+
+# Language-specific
+node_modules/
+.npm/
+.pnpm-store/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build artifacts
+dist/
+build/
+*.tar.gz
+
+# Local-only working scratch
+scratch/
+local/
 
 # Project-level dogfooding metadata — agent may keep or move; not part of skill distribution
 # (uncomment to exclude from the skill repo if they should travel with the agency instead)

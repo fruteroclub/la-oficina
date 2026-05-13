@@ -19,6 +19,14 @@ Pointers to external resources. Each entry carries the 5-field schema:
 - **last_verified:** 2026-05-13
 - **why_it_matters:** English-language companion. Adapted (not literal translation) for the secondary international audience.
 
+### Living manual — Manual de Frutero Agency (ES)
+
+- **kind:** handbook (living doc, ES)
+- **canonical_path:** `pods/lab/office/workspaces/fruteroclub/projects/la-oficina/content/handbook/frutero-agency-handbook.es.md`
+- **owner:** @mel
+- **last_verified:** 2026-05-13
+- **why_it_matters:** Single source of truth for "how Frutero Agency operates" with sections per audience (Club members, prospective Operators, prospective clients), plus pod-day operating manual and comms doctrine. Companion to the launch blog post: blog = "why", handbook = "how". Updated as reality changes.
+
 ### Reference material
 
 - **kind:** doc (agency-level)

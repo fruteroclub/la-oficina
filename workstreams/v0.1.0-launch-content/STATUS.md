@@ -14,6 +14,7 @@ First long-form piece drafted in ES (canonical) and EN (companion). Both live at
 
 - "Por qué La Oficina" (ES) — draft v1 written, awaiting @mel review.
 - "Why La Oficina" (EN) — companion draft v1 written, awaiting @mel review.
+- "Manual de Frutero Agency" (ES) — v1 written, awaiting @mel review.
 
 ## Blocked
 
