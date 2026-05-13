@@ -1,0 +1,54 @@
+# Schema for PROJECT.md frontmatter
+# Compatible with intern-os v0.4.1 project shape; extended for La Oficina context.
+$schema_version: 1
+$kind: project-identity
+
+required:
+  - name
+  - owner
+  - workspace
+  - created
+
+properties:
+  name:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9-]*$"
+    description: "Filesystem-safe project slug"
+
+  owner:
+    type: string
+    description: "Primary owner. Typically '@<handle>' or a role."
+
+  workspace:
+    type: string
+    description: "Parent workspace's workspace_id"
+
+  pod:
+    type: string
+    description: "Parent pod's pod_id (optional; can be derived from filesystem)"
+
+  created:
+    type: string
+    format: date
+
+  status:
+    type: string
+    enum: [active, paused, archived, planning]
+    default: planning
+
+  purpose:
+    type: string
+    description: "One-line objective"
+
+  # intern-os compatibility — these fields work the same as in intern-os projects
+  primary_thread:
+    type: [string, "null"]
+    description: "Communication thread bound to this project (Slack/Discord/etc), null until established"
+
+  tick_file:
+    type: string
+    default: "TICK.md"
+
+  workstreams_dir:
+    type: string
+    default: "workstreams/"

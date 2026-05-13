@@ -1,0 +1,55 @@
+# Schema for .pod/POD.md frontmatter
+$schema_version: 1
+$kind: pod-identity
+
+required:
+  - pod_id
+  - pod_name
+  - owner
+  - created
+  - status
+
+properties:
+  pod_id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9-]*$"
+    description: "Filesystem-safe pod slug. Lowercase, hyphen-allowed, no leading hyphen."
+    example: "lab"
+
+  pod_name:
+    type: string
+    description: "Human-readable pod name"
+    example: "lab"
+
+  owner:
+    type: string
+    description: "Primary owner / responsible Architect"
+
+  created:
+    type: string
+    format: date
+    example: "2026-05-13"
+
+  status:
+    type: string
+    enum: [active, paused, archived]
+
+  purpose:
+    type: string
+    description: "One-line purpose statement"
+
+  agent_harness:
+    type: string
+    description: "Agent harness operating this pod"
+    enum: [hermes, claude-code, openclaw, codex, cursor, generic, tbd]
+    default: tbd
+
+  loadable_by:
+    type: string
+    description: "Access policy for BYOA"
+    enum: [any, invitation, pod-owner-only]
+    default: invitation
+
+# Companion files at .pod/:
+#   BOOTSTRAP.md     — agent context-loading instructions
+#   STATUS.md        — current internOS status (frontmatter: pod, updated, internos_compat, oficina_version)

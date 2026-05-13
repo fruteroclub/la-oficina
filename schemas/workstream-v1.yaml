@@ -1,0 +1,59 @@
+# Schema for workstream files
+# Lifted directly from intern-os v0.4.1 — La Oficina does not modify workstream-level conventions.
+# Reference: ~/.claude/skills/intern-os/SKILL.md and intern-os/references/en/FRAMEWORK.md
+$schema_version: 1
+$kind: workstream-files
+
+# Workstream root files
+files:
+  BRIEF.md:
+    required: true
+    description: "Workstream identity, scope, success criteria"
+    frontmatter:
+      required: [name, owner, project, created, thread_id]
+      properties:
+        name: { type: string }
+        owner: { type: string }
+        project: { type: string }
+        created: { type: string, format: date }
+        thread_id: { type: [string, "null"], description: "Communication thread binding" }
+        status: { type: string, enum: [active, paused, completed, blocked] }
+        priority: { type: string, enum: [low, medium, high, critical] }
+
+  STATUS.md:
+    required: true
+    description: "Current operational state. Updated frequently."
+    frontmatter:
+      properties:
+        workstream: { type: string }
+        updated: { type: string, format: date-time }
+        next_action: { type: string }
+
+  MEMORY.md:
+    required: true
+    description: "Durable facts that should survive across sessions"
+
+  DECISIONS.md:
+    required: true
+    description: "D-numbered decisions log with rationale"
+
+  STAKEHOLDERS.md:
+    required: true
+
+  RESOURCES.md:
+    required: true
+    description: "Pointers to external resources. Each carries: kind, canonical_path, owner, last_verified, why_it_matters."
+
+  SESSIONS.md:
+    required: true
+    description: "Append-only session log"
+
+# Workstream-level subdirectories
+subdirs:
+  docs/:
+    required: false
+    description: "Workstream-scoped documentation"
+
+  handoffs/:
+    required: false
+    description: "Per intern-os v0.4.0 isolated-handoff doctrine"

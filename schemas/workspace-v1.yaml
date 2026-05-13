@@ -1,0 +1,63 @@
+# Schema for WORKSPACE.md frontmatter
+$schema_version: 1
+$kind: workspace-identity
+
+required:
+  - workspace_id
+  - workspace_name
+  - role
+  - owner
+  - created
+  - status
+
+properties:
+  workspace_id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9-]*$"
+
+  workspace_name:
+    type: string
+    description: "Human-readable workspace name"
+
+  role:
+    type: string
+    enum: [org, client, partner, internal, purpose]
+    description: |
+      org = the workspace owner's own organization
+      client = an external client engagement
+      partner = a strategic partner
+      internal = internal infrastructure / shared services
+      purpose = purpose-shaped workspace (e.g., 'meta' for system work)
+
+  owner:
+    type: string
+
+  created:
+    type: string
+    format: date
+
+  status:
+    type: string
+    enum: [active, paused, archived, stub]
+
+  purpose:
+    type: string
+    description: "One-line purpose statement"
+
+  # Optional org-specific metadata
+  organization:
+    type: object
+    properties:
+      legal_name: { type: string }
+      website: { type: string }
+      primary_contact: { type: string }
+
+  # Client-specific metadata (when role == client)
+  client:
+    type: object
+    properties:
+      name: { type: string }
+      sow_reference: { type: string, description: "Path or URL to SOW" }
+      start_date: { type: string, format: date }
+      end_date: { type: string, format: date }
+      fee: { type: string }

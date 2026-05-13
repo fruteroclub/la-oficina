@@ -1,0 +1,22 @@
+---
+oficina_version: {{OFICINA_VERSION}}
+schema_version: 1
+agency:
+  name: {{AGENCY_NAME}}
+  owner: {{AGENCY_OWNER}}
+  created: {{CREATED_DATE}}
+conventions:
+  identity_files:
+    pod: .pod/POD.md
+    office: OFFICE.md
+    workspace: WORKSPACE.md
+    project: PROJECT.md
+    workstream: BRIEF.md
+  per_level:
+    - INDEX.md
+    - LOG.md
+    - AGENTS.md
+  pod_marker: .pod/
+  agency_marker: .oficina/
+  vault_marker: .obsidian/
+---

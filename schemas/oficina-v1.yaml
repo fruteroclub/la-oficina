@@ -1,0 +1,67 @@
+# Schema for .oficina/config.yaml at the agency root
+$schema_version: 1
+$kind: oficina-config
+
+required:
+  - oficina_version
+  - schema_version
+  - agency
+  - conventions
+
+properties:
+  oficina_version:
+    type: string
+    description: "Version of La Oficina that initialized this agency"
+    example: "0.1.0"
+
+  schema_version:
+    type: integer
+    description: "Schema version for forward compatibility"
+    example: 1
+
+  agency:
+    type: object
+    required: [name, owner, created]
+    properties:
+      name:
+        type: string
+        description: "Agency name (typically the agency owner's identity)"
+      owner:
+        type: string
+        description: "Primary owner / Architect"
+      created:
+        type: string
+        format: date
+        description: "YYYY-MM-DD"
+
+  conventions:
+    type: object
+    description: "Filesystem conventions for this agency. Tools read this to navigate."
+    required: [identity_files, per_level, pod_marker, agency_marker, vault_marker]
+    properties:
+      identity_files:
+        type: object
+        description: "Per-level identity file paths (relative to level root)"
+      per_level:
+        type: array
+        description: "Files present at every level (e.g., INDEX.md, LOG.md, AGENTS.md)"
+      pod_marker:
+        type: string
+        description: "Marker directory that identifies a pod (default: .pod/)"
+      agency_marker:
+        type: string
+        description: "Marker directory that identifies an agency (default: .oficina/)"
+      vault_marker:
+        type: string
+        description: "Marker directory that identifies an Obsidian vault (default: .obsidian/)"
+
+# Companion file: .oficina/pods.yaml
+# Schema for pods registry:
+#
+# schema_version: integer
+# pods:
+#   - name: string             # filesystem-safe pod slug
+#     path: string             # relative path from agency root
+#     status: enum [active, paused, archived]
+#     created: date
+#     purpose: string

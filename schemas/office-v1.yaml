@@ -1,0 +1,26 @@
+# Schema for OFFICE.md frontmatter
+$schema_version: 1
+$kind: office-identity
+
+required:
+  - office_id
+  - pod
+  - owner
+  - created
+
+properties:
+  office_id:
+    type: string
+    pattern: "^[a-z0-9][a-z0-9-]*$"
+    description: "Filesystem-safe slug. Typically <pod>-office or just <pod>."
+
+  pod:
+    type: string
+    description: "Parent pod's pod_id"
+
+  owner:
+    type: string
+
+  created:
+    type: string
+    format: date

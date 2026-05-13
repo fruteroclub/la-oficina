@@ -1,0 +1,14 @@
+.DS_Store
+*.swp
+*.tmp
+node_modules/
+.env
+.env.local
+
+# Project-level dogfooding metadata — agent may keep or move; not part of skill distribution
+# (uncomment to exclude from the skill repo if they should travel with the agency instead)
+# PROJECT.md
+# AGENTS.md
+# INDEX.md
+# TICK.md
+# workstreams/
