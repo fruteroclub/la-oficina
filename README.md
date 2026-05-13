@@ -2,7 +2,7 @@
 
 > **Operating System for AI-Native Agencies.** Scaffolds the hierarchy that lets an agent (or a team of agents) operate an agency, pods, organizations, and engagements from one filesystem-canonical, harness-agnostic shape.
 
-**Status:** v0.1.0-pre. Initial seed. The agent operating the lab pod is the first builder of this skill.
+**Status:** v0.1.0 (alpha) — [release](https://github.com/fruteroclub/la-oficina/releases/tag/v0.1.0). Two commands implemented (`resolve`, `module-load`); seven ship as functional stubs with a clear backlog in [TICK.md](TICK.md).
 
 **License:** AGPL v3 + commercial license required for commercial deployments. See [LICENSE](LICENSE).
 
@@ -23,32 +23,61 @@ When an agency runs multiple pods (architect-led units, each with multiple clien
 
 ## Install
 
-```bash
-# Hermes
-hermes skills install fruteroclub/la-oficina
+### Hermes
 
-# Claude Code
-# (TBD — depends on Claude Code skill install conventions)
+```bash
+hermes skills install fruteroclub/la-oficina
 ```
+
+See [adapters/hermes/SETUP.md](adapters/hermes/SETUP.md) for full details.
+
+### Claude Code
+
+Claude Code skills are plain directories under `~/.claude/skills/`. Clone the project, then symlink the skill manifest and CLI:
+
+```bash
+git clone https://github.com/fruteroclub/la-oficina.git ~/src/la-oficina
+ln -s ~/src/la-oficina ~/.claude/skills/la-oficina
+mkdir -p ~/.local/bin
+ln -s ~/src/la-oficina/bin/oficina ~/.local/bin/oficina
+oficina --version   # → oficina 0.1.0
+```
+
+Make sure `~/.local/bin` is on your `PATH`. See [adapters/claude-code/SETUP.md](adapters/claude-code/SETUP.md) for configuration, update, and uninstall steps.
+
+### Other harnesses
+
+See [adapters/](adapters/) for Obsidian and generic patterns.
 
 ## Use
 
+### Working in v0.1.0
+
 ```bash
-# At your agent harness's workspace root:
-oficina init                                    # Scaffold .obsidian/, .oficina/, pods/
-oficina add-pod <name>                          # Create pods/<name>/.pod/ + office/
-oficina add-workspace <ws> --pod <pod>          # Add an org workspace
+oficina help                                    # Command list (marks stubs)
+oficina version                                 # → 0.1.0
+oficina resolve [<path>]                        # Identify current module + parent chain (eval-safe KEY=value)
+oficina module-load <path> [--children-depth 0|1]
+                                                # Emit scoped context bundle for an agent
+```
+
+These two are enough for any harness (Hermes, Claude Code, BYOA) to install La Oficina and operate **pre-scaffolded** pods — Dumbleclaw's daily workflow runs on them.
+
+### In flight (functional stubs in v0.1.0)
+
+The following commands print `TODO: implement` and `exit 1` in v0.1.0. They ship as their full CLI surface so harnesses can plan integration; implementations land in v0.1.x point releases. See TICK.md TASK-008..015.
+
+```bash
+oficina init                                    # Scaffold a new agency root
+oficina add-pod <name>                          # Scaffold a pod
+oficina add-workspace <ws> --pod <pod>
 oficina add-project <p> --pod <pod> --workspace <ws>
 oficina add-workstream <w> --pod <pod> --workspace <ws> --project <p>
-
-# Indexing + resolution:
 oficina index [<path>]                          # Regenerate INDEX.md at any level
-oficina resolve                                 # Name the current module + parent chain
-oficina module-load <path>                      # Emit context bundle for an agent
-
-# Wiki seeding:
-oficina seed-wiki                               # Read agent harness config, write LLM-Wiki pages
+oficina seed-wiki                               # Seed LLM-Wiki from harness configs
 ```
+
+Pre-scaffolding by hand follows the structure shown in [docs/shape.md](docs/shape.md) and the layouts in [templates/](templates/).
 
 ## The hierarchy
 
@@ -83,7 +112,7 @@ See [docs/shape.md](docs/shape.md) for full doctrine.
 
 ## Project status
 
-This repo is being dogfooded inside its own pod at `~/oficina/pods/lab/office/workspaces/fruteroclub/projects/la-oficina/`. The lab pod's agent is the primary builder. See [PROJECT.md](PROJECT.md) and [TICK.md](TICK.md) for the development plan.
+**v0.1.0 is tagged and released.** This project is dogfooded inside its own pod at `~/oficina/pods/lab/office/workspaces/fruteroclub/projects/la-oficina/`. Implementation work continues in the open inside the [`build-in-public-alpha-version`](workstreams/build-in-public-alpha-version/BRIEF.md) workstream — Dumbleclaw drives, @mel supervises. See [PROJECT.md](PROJECT.md) for scope and [TICK.md](TICK.md) for the backlog.
 
 ## Built by
 
