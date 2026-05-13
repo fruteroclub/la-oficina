@@ -2,6 +2,17 @@
 
 > **Version scheme:** `0.x.x` to reflect alpha status.
 
+## Unreleased — 2026-05-13 (continued)
+
+### Added
+- `bin/oficina` — CLI dispatcher. Routes `oficina <subcommand>` to `scripts/oficina-<subcommand>.sh`. Includes `help` / `version` meta commands. Handles symlinked invocation. Lets a Hermes install of the skill expose a single `oficina` binary on the user's PATH.
+- `scripts/oficina-resolve.sh` — full implementation. Walks up from a path, detects markers (`.oficina/`, `.pod/`) and identity files (`OFFICE.md`, `WORKSPACE.md`, `PROJECT.md`, `BRIEF.md`), emits one `KEY=value` line per scope variable plus `MODULE_LEVEL`. Output is `eval`-safe.
+- `scripts/oficina-module-load.sh` — full implementation. Uses `resolve` under the hood to identify the target, emits the four-section markdown bundle defined in `docs/module-loading.md` (orientation / target / children / scope). Supports `--children-depth 0|1`.
+
+### Notes for downstream consumers
+- This is the minimum-viable v0.1.0 path for the Hermes Agent: resolve + module-load + dispatcher are enough for Dumbleclaw to load any pod and operate inside it. The remaining script stubs (`init`, `add-*`, `index`, `seed-wiki`) still `exit 1` with TODO — see TICK.md TASK-008..015.
+- `VERSION` file currently reads `0.1.0`; `SKILL.md` frontmatter still reads `0.1.0-pre`. Version-consistency reconciliation is TASK-016 and will land with the release workflow.
+
 ## v0.1.0-pre — 2026-05-13
 
 Initial seed.

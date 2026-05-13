@@ -6,7 +6,7 @@ created: 2026-05-13
 updated: 2026-05-13
 default_workflow: [backlog, todo, in_progress, review, done]
 id_prefix: TASK
-next_id: 22
+next_id: 23
 ---
 
 ## Agents
@@ -55,10 +55,10 @@ tags: [seed, adapters]
 > Stub adapter SETUP.md for Hermes, Claude Code, Obsidian, generic. (Done 2026-05-13.)
 
 ### TASK-007
-status: todo
+status: done
 priority: high
 tags: [v0.1.0, scripts]
-> Implement `scripts/oficina-resolve.sh` — walk up from cwd, identify current module (pod/office/workspace/project/workstream), output parent chain. Foundation for module-load and add-*.
+> Implement `scripts/oficina-resolve.sh` — walk up from cwd, identify current module (pod/office/workspace/project/workstream), output parent chain. Foundation for module-load and add-*. (Done 2026-05-13. Tested at every level + outside-agency case.)
 
 ### TASK-008
 status: todo
@@ -97,10 +97,16 @@ tags: [v0.1.0, scripts]
 > Implement `scripts/oficina-index.sh [<path>]` — regenerate INDEX.md at the given level (or all levels if no path given). Reads child identity files for names/status.
 
 ### TASK-014
-status: todo
+status: done
 priority: high
 tags: [v0.1.0, scripts]
-> Implement `scripts/oficina-module-load.sh <path>` — output a markdown context bundle: parent identity files walked up from <path>, plus AGENTS.md/INDEX.md/identity at <path>, plus subtree below <path>. Sibling/higher-content is excluded (identity-only).
+> Implement `scripts/oficina-module-load.sh <path>` — output a markdown context bundle: parent identity files walked up from <path>, plus AGENTS.md/INDEX.md/identity at <path>, plus subtree below <path>. Sibling/higher-content is excluded (identity-only). (Done 2026-05-13. Tested at every level; --children-depth 0|1 supported.)
+
+### TASK-022
+status: done
+priority: high
+tags: [v0.1.0, scripts]
+> Implement `bin/oficina` CLI dispatcher — routes `oficina <subcommand>` to `scripts/oficina-<subcommand>.sh`, exposes `help` / `version` meta commands, resolves real path through symlinks. Needed so Hermes installs surface a single `oficina` binary. (Done 2026-05-13.)
 
 ### TASK-015
 status: todo

@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+#
+# oficina — CLI dispatcher for La Oficina commands.
+#
+# Routes `oficina <subcommand> [args...]` to `scripts/oficina-<subcommand>.sh`.
+# Discovers the scripts directory relative to this file so the dispatcher works
+# from any install path (~/.local/bin symlink, package-managed install, etc.).
+
+set -euo pipefail
+
+# Resolve the real path of this script even if invoked via symlink.
+_resolve_self() {
+  local src="${BASH_SOURCE[0]}"
+  while [ -h "$src" ]; do
+    local dir
+    dir="$(cd -P "$(dirname "$src")" && pwd)"
+    src="$(readlink "$src")"
+    [[ $src != /* ]] && src="$dir/$src"
+  done
+  cd -P "$(dirname "$src")" && pwd
+}
+
+BIN_DIR="$(_resolve_self)"
+PROJECT_ROOT="$(cd "$BIN_DIR/.." && pwd)"
+SCRIPTS_DIR="$PROJECT_ROOT/scripts"
+
+VERSION_FILE="$PROJECT_ROOT/VERSION"
+VERSION="$( [ -f "$VERSION_FILE" ] && cat "$VERSION_FILE" || echo "unknown" )"
+
+usage() {
+  cat <<EOF
+oficina ${VERSION} — operating system for AI-native agencies
+
+usage: oficina <command> [args...]
+
+Commands (v0.1.0):
+  resolve [PATH]                  Identify current module + parent chain.
+  module-load PATH [--children-depth N]
+                                  Emit a scoped context bundle for an agent.
+  init [--path DIR] [--name N] [--owner U] [--force]
+                                  Scaffold a new agency root.            (stub)
+  add-pod NAME                    Scaffold a new pod.                    (stub)
+  add-workspace NAME --pod P      Scaffold a workspace under a pod.      (stub)
+  add-project NAME --pod P --workspace W
+                                  Scaffold a project.                    (stub)
+  add-workstream NAME --pod P --workspace W --project J
+                                  Scaffold a workstream.                 (stub)
+  index [PATH]                    Regenerate INDEX.md.                   (stub)
+  seed-wiki                       Seed LLM-Wiki from harness configs.    (stub)
+
+Meta:
+  help, -h, --help                Show this message.
+  version, -v, --version          Print version and exit.
+
+Stubs are the v0.1.0 implementation backlog — see TICK.md (TASK-007..015).
+Implemented in this release: resolve, module-load.
+
+See \`docs/\` in the project repo for the operating doctrine.
+EOF
+}
+
+if [ $# -eq 0 ]; then
+  usage
+  exit 2
+fi
+
+case "$1" in
+  -h|--help|help)
+    usage
+    exit 0
+    ;;
+  -v|--version|version)
+    echo "oficina $VERSION"
+    exit 0
+    ;;
+esac
+
+SUBCMD="$1"
+shift
+
+SCRIPT_PATH="$SCRIPTS_DIR/oficina-${SUBCMD}.sh"
+
+if [ ! -f "$SCRIPT_PATH" ]; then
+  echo "oficina: unknown command: $SUBCMD" >&2
+  echo "Run \`oficina help\` for available commands." >&2
+  exit 2
+fi
+
+if [ ! -x "$SCRIPT_PATH" ]; then
+  echo "oficina: $SCRIPT_PATH is not executable" >&2
+  exit 2
+fi
+
+exec "$SCRIPT_PATH" "$@"
