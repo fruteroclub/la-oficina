@@ -27,6 +27,32 @@ Pointers to external resources. Each entry carries the 5-field schema:
 - **last_verified:** 2026-05-13
 - **why_it_matters:** Single source of truth for "how Frutero Agency operates" with sections per audience (Club members, prospective Operators, prospective clients), plus pod-day operating manual and comms doctrine. Companion to the launch blog post: blog = "why", handbook = "how". Updated as reality changes.
 
+### Short-form derivatives
+
+- **kind:** draft (X/Twitter thread, ES)
+- **canonical_path:** `pods/lab/.../projects/la-oficina/content/social/2026-05-13-launch-thread.es.md`
+- **owner:** @mel
+- **last_verified:** 2026-05-13
+- **why_it_matters:** 7-tweet ES cut of the launch narrative for distribution on X/Twitter. Verify character counts before posting.
+
+- **kind:** draft (X/Twitter thread, EN)
+- **canonical_path:** `pods/lab/.../projects/la-oficina/content/social/2026-05-13-launch-thread.en.md`
+- **owner:** @mel
+- **last_verified:** 2026-05-13
+- **why_it_matters:** 7-tweet EN companion. Adapted, not literal translation.
+
+- **kind:** draft (LinkedIn post, ES)
+- **canonical_path:** `pods/lab/.../projects/la-oficina/content/social/2026-05-13-launch-linkedin.es.md`
+- **owner:** @mel
+- **last_verified:** 2026-05-13
+- **why_it_matters:** Single-post ES cut for LinkedIn. More professional/conversational tone than the thread.
+
+- **kind:** draft (LinkedIn post, EN)
+- **canonical_path:** `pods/lab/.../projects/la-oficina/content/social/2026-05-13-launch-linkedin.en.md`
+- **owner:** @mel
+- **last_verified:** 2026-05-13
+- **why_it_matters:** EN LinkedIn companion.
+
 ### Reference material
 
 - **kind:** doc (agency-level)

@@ -23,7 +23,8 @@
 
 - [content/blog/](content/blog/) — Frutero Club blog drafts (build-in-public, dated posts). Canonical location for time-stamped pieces.
 - [content/handbook/](content/handbook/) — Living manuals. Currently: [Manual de Frutero Agency (ES)](content/handbook/frutero-agency-handbook.es.md).
-- Work surrounding both is tracked in `workstreams/v0.1.0-launch-content/`.
+- [content/social/](content/social/) — Short-form derivatives (X threads, LinkedIn posts). Cuts of long-form for distribution surfaces.
+- Work surrounding all of the above is tracked in `workstreams/v0.1.0-launch-content/`.
 
 ## Workstreams
 

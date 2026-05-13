@@ -61,3 +61,35 @@ Each entry uses the fields below. Append at the bottom — never edit or remove 
 - **References:** Companion to the launch post: blog = "why", handbook = "how". Sections per audience (Club members, prospective Operators, prospective clients).
 - **Status:** draft — awaiting @mel review
 - **Notes:** Designed to be updated as reality changes; not a one-shot publication. Once approved, gets a stable URL on frutero.club.
+
+### 2026-05-13 | x-twitter | public | short-form (draft)
+- **By:** Claude Opus 4.7 + @mel
+- **Title / handle:** Launch thread (ES, 7 tweets)
+- **Canonical path or URL:** `content/social/2026-05-13-launch-thread.es.md`
+- **References:** Cut of the ES long-form launch post for X/Twitter distribution.
+- **Status:** draft — awaiting @mel review; character counts unverified per-tweet
+- **Notes:** Includes links to repo, long-form, and handbook. Verify each tweet ≤280 chars before scheduling.
+
+### 2026-05-13 | x-twitter | public | short-form (draft)
+- **By:** Claude Opus 4.7 + @mel
+- **Title / handle:** Launch thread (EN, 7 tweets)
+- **Canonical path or URL:** `content/social/2026-05-13-launch-thread.en.md`
+- **References:** EN companion of the ES launch thread.
+- **Status:** draft — awaiting @mel review
+- **Notes:** Same review gates as the ES thread.
+
+### 2026-05-13 | linkedin | public | short-form (draft)
+- **By:** Claude Opus 4.7 + @mel
+- **Title / handle:** Launch post (ES, LinkedIn)
+- **Canonical path or URL:** `content/social/2026-05-13-launch-linkedin.es.md`
+- **References:** Cut of the ES launch post for LinkedIn. More conversational/professional tone than the thread.
+- **Status:** draft — awaiting @mel review
+- **Notes:** Includes hashtag set tuned for LATAM tech audience.
+
+### 2026-05-13 | linkedin | public | short-form (draft)
+- **By:** Claude Opus 4.7 + @mel
+- **Title / handle:** Launch post (EN, LinkedIn)
+- **Canonical path or URL:** `content/social/2026-05-13-launch-linkedin.en.md`
+- **References:** EN companion of the ES LinkedIn post.
+- **Status:** draft — awaiting @mel review
+- **Notes:** Hashtag set kept similar but slightly adjusted for international audience.
