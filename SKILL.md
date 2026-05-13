@@ -1,7 +1,7 @@
 ---
 name: la-oficina
 description: "Operating System for AI-Native Agencies — scaffolds the hierarchy (agency → pod → office → workspaces → projects → workstreams), seeds LLM-Wiki, supports module-scoped agent loading. Works with any agent harness."
-version: 0.1.0-pre
+version: 0.1.0
 repo: https://github.com/fruteroclub/la-oficina
 license: AGPL-3.0
 license_commercial: "Commercial license required for commercial use. Contact hola@frutero.club"
@@ -54,4 +54,4 @@ See `docs/` for full doctrine.
 
 ## Status
 
-v0.1.0-pre. The lab pod at `~/oficina/pods/lab/` is the first dogfooding instance. Script implementations pending — being built by the lab pod's agent.
+v0.1.0. The lab pod at `~/oficina/pods/lab/` is the first dogfooding instance. Two commands are fully implemented (`resolve`, `module-load`) — enough for Hermes / Dumbleclaw to install the skill and operate any pre-scaffolded pod. The remaining 7 commands (`init`, `add-pod`, `add-workspace`, `add-project`, `add-workstream`, `index`, `seed-wiki`) are functional stubs that print `TODO: implement` and `exit 1`; they ship as the v0.1.0 implementation backlog (TICK.md TASK-008..015).
