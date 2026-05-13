@@ -55,7 +55,8 @@
 ## Operational links
 
 - **TICK.md:** [TICK.md](TICK.md)
-- **Workstreams:** `workstreams/` (none yet)
+- **Workstreams:**
+  - [`v0.1.0-launch-content/`](workstreams/v0.1.0-launch-content/BRIEF.md) — Frutero Club blog + build-in-public content arc surrounding v0.1.0 (active, started 2026-05-13)
 
 ## Notes
 

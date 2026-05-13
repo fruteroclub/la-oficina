@@ -19,6 +19,10 @@
 - [scripts/](scripts/) — CLI command implementations
 - [adapters/](adapters/) — per-harness setup notes
 
+## Maintainer content
+
+- [content/blog/](content/blog/) — Frutero Club blog drafts (build-in-public). Canonical location for published/publishable artifacts. Work tracked in `workstreams/v0.1.0-launch-content/`.
+
 ## Workstreams
 
-(none yet — workstreams will be added as discrete bodies of work begin)
+- [v0.1.0-launch-content/](workstreams/v0.1.0-launch-content/BRIEF.md) — content arc surrounding the v0.1.0 launch (Frutero Club blog + derivatives). Status: active.

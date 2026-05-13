@@ -6,7 +6,7 @@ created: 2026-05-13
 updated: 2026-05-13
 default_workflow: [backlog, todo, in_progress, review, done]
 id_prefix: TASK
-next_id: 11
+next_id: 22
 ---
 
 ## Agents
@@ -137,3 +137,9 @@ status: todo
 priority: low
 tags: [v0.2.0, hardening]
 > Spec module-scope enforcement options beyond honor-system (filesystem ACLs, symlink jails, container isolation).
+
+### TASK-021
+status: in_progress
+priority: high
+tags: [v0.1.0, content, build-in-public]
+> Produce the v0.1.0 launch content arc (Frutero Club blog + derivatives). Tracked in `workstreams/v0.1.0-launch-content/`. First piece ("Por qué La Oficina" ES + EN companion) drafted 2026-05-13, awaiting @mel review. Workstream owns granular tasks; this TASK is the project-level pointer.
