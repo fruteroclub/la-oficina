@@ -43,3 +43,6 @@ See STAKEHOLDERS.md.
 
 ## Resources
 See RESOURCES.md.
+
+## Communications log
+See COMMS.md for append-only log of what's been said externally + internally.
