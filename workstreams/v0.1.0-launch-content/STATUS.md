@@ -1,14 +1,16 @@
 ---
 workstream: v0.1.0-launch-content
 updated: 2026-05-13
-next_action: Hand canonical ES draft to Dumbleclaw for adaptation; collect editorial feedback from @mel.
+next_action: Hand canonical ES draft to Dumbleclaw for adaptation; collect editorial feedback from @mel; align publication timing with v0.1.0 release (now live).
 ---
 
 # STATUS
 
 ## Current state
 
-First long-form piece drafted in ES (canonical) and EN (companion). Both live at the project-level `content/blog/` directory. Workstream set up to track the surrounding work as the v0.1.0 launch arc unfolds.
+**La Oficina v0.1.0 was tagged and a GitHub release published on 2026-05-13.** That's the public anchor the launch content arc was waiting on — drafts can now reference the tagged release URL (`https://github.com/fruteroclub/la-oficina/releases/tag/v0.1.0`) instead of just `main`.
+
+First long-form piece drafted in ES (canonical) and EN (companion). Handbook v1 drafted in ES. Short-form derivatives drafted (X thread + LinkedIn, ES + EN). All seven drafts await @mel editorial review. Once approved, publishing order locks in (blog first → X thread → LinkedIn) and we can schedule.
 
 ## In progress
 
@@ -26,7 +28,9 @@ First long-form piece drafted in ES (canonical) and EN (companion). Both live at
 
 ## Next
 
-- @mel reviews ES + EN drafts; mark edits inline or in a session note.
-- Pass canonical ES to Dumbleclaw and observe how it adapts for its surfaces.
-- Decide on publishing channel order (probably: frutero.club blog first, then X thread, then LinkedIn).
-- Outline the short-form thread cut once long-form is approved.
+- @mel reviews all 7 drafts; mark edits inline or in a session note.
+- Update draft URLs from `main` to the `v0.1.0` tag so links are stable.
+- Verify X thread character counts before scheduling.
+- Pass canonical ES blog post to Dumbleclaw and observe how it adapts for its surfaces.
+- Lock publishing channel order (probable: frutero.club blog → X thread → LinkedIn → handbook).
+- Schedule first publication once @mel approves.

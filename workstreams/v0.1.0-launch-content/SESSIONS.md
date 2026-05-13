@@ -25,3 +25,20 @@ Append-only session log. One entry per session.
   - `content/social/2026-05-13-launch-thread.{es,en}.md`
   - `content/social/2026-05-13-launch-linkedin.{es,en}.md`
   - Registered everything in project INDEX.md, workstream RESOURCES.md, STATUS.md, COMMS.md
+
+## Session — 2026-05-13 (v0.1.0 release shipped)
+- **Agent:** Claude Opus 4.7 (1M context)
+- **Duration:** continuation of prior session
+- **Summary:** Shipped the minimum-viable v0.1.0 path so the Hermes Agent can install La Oficina and Dumbleclaw can operate any pre-scaffolded pod. Implementation work is **out of scope for this workstream** (per BRIEF.md Excludes) and tracked at project TICK level (TASK-007, TASK-014, TASK-022 now `done`; TASK-008..015 still backlog). This workstream entry exists because the v0.1.0 release itself is a public communications event — the anchor the launch content arc revolves around. Drafts now point at a tagged release URL instead of `main`.
+- **Outputs:**
+  - Commits: `87b0ece` (resolve + module-load + dispatcher), `53b3672` (release: v0.1.0)
+  - Tag: `v0.1.0` pushed to origin
+  - GitHub release: https://github.com/fruteroclub/la-oficina/releases/tag/v0.1.0
+  - COMMS.md: appended `2026-05-13 | repo | public | announcement` entry for the release
+  - STATUS.md: current state updated; next-actions added (drafts → tagged URL, char-count verification, publication ordering)
+- **Open for @mel:**
+  - Editorial pass on all 7 content drafts
+  - Update draft URLs from `main` to `v0.1.0` tag
+  - Fill in pending public links (Frutero Club community, Operator application, engagement contact, X handle confirmation)
+  - Sign-off path for pod 1 client name → reverse redactions in workstream files
+  - Confirm publication channel order + schedule first post

@@ -93,3 +93,11 @@ Each entry uses the fields below. Append at the bottom — never edit or remove 
 - **References:** EN companion of the ES LinkedIn post.
 - **Status:** draft — awaiting @mel review
 - **Notes:** Hashtag set kept similar but slightly adjusted for international audience.
+
+### 2026-05-13 | repo | public | announcement
+- **By:** @mel + Claude Opus 4.7
+- **Title / handle:** v0.1.0 release tagged + GitHub release published
+- **Canonical path or URL:** https://github.com/fruteroclub/la-oficina/releases/tag/v0.1.0
+- **References:** First taggable release. Two commands implemented (resolve, module-load) + bin/oficina dispatcher. Anchor that the launch content arc points at.
+- **Status:** published
+- **Notes:** Honest release notes — 7/9 commands ship as stubs and we say so. Hermes deployable. Tag also created locally: `v0.1.0`. Once @mel approves the launch blog/thread/LinkedIn drafts, they should link to the tagged release URL (not `main`) so references stay stable across future commits.
