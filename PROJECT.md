@@ -56,7 +56,8 @@
 
 - **TICK.md:** [TICK.md](TICK.md)
 - **Workstreams:**
-  - [`v0.1.0-launch-content/`](workstreams/v0.1.0-launch-content/BRIEF.md) — Frutero Club blog + build-in-public content arc surrounding v0.1.0 (active, started 2026-05-13)
+  - [`v0.1.0-launch-content/`](workstreams/v0.1.0-launch-content/BRIEF.md) — Frutero Club blog + build-in-public content arc surrounding v0.1.0 (active, started 2026-05-13, owner @mel)
+  - [`build-in-public-alpha-version/`](workstreams/build-in-public-alpha-version/BRIEF.md) — implementation arc for v0.1.x alpha; Dumbleclaw drives skill creation + polish (active, started 2026-05-13, owner @dumbleclaw)
 
 ## Notes
 

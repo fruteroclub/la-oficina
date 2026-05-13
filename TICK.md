@@ -6,15 +6,16 @@ created: 2026-05-13
 updated: 2026-05-13
 default_workflow: [backlog, todo, in_progress, review, done]
 id_prefix: TASK
-next_id: 23
+next_id: 24
 ---
 
 ## Agents
 
 | Agent | Type | Role | Status | Working On | Last Active | Trust Level |
 |-------|------|------|--------|------------|-------------|-------------|
-| @mel | human | owner | idle | - | 2026-05-13 | owner |
-| @lab-agent | bot | primary builder | idle | - | 2026-05-13 | trusted |
+| @mel | human | Architect / owner | idle | - | 2026-05-13 | owner |
+| @dumbleclaw | bot | primary Operator (Hermes harness on EC2) | idle | build-in-public-alpha-version | 2026-05-13 | trusted |
+| @lab-agent | bot | generic lab Operator (any harness) | idle | - | 2026-05-13 | trusted |
 
 ## Tasks
 
@@ -107,6 +108,13 @@ status: done
 priority: high
 tags: [v0.1.0, scripts]
 > Implement `bin/oficina` CLI dispatcher — routes `oficina <subcommand>` to `scripts/oficina-<subcommand>.sh`, exposes `help` / `version` meta commands, resolves real path through symlinks. Needed so Hermes installs surface a single `oficina` binary. (Done 2026-05-13.)
+
+### TASK-023
+status: in_progress
+priority: high
+tags: [v0.1.x, workstream, build-in-public]
+claimed_by: "@dumbleclaw"
+> Drive v0.1.x alpha to completion. Tracked in `workstreams/build-in-public-alpha-version/`. Dumbleclaw owns; @mel supervises. Scope covers TASK-008..016 implementation + tests + dogfooding milestones. This TASK is the project-level pointer; granular task tracking happens inside the workstream + against TASK-008..018 directly.
 
 ### TASK-015
 status: todo

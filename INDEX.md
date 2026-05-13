@@ -28,4 +28,5 @@
 
 ## Workstreams
 
-- [v0.1.0-launch-content/](workstreams/v0.1.0-launch-content/BRIEF.md) — content arc surrounding the v0.1.0 launch (Frutero Club blog + derivatives). Status: active.
+- [v0.1.0-launch-content/](workstreams/v0.1.0-launch-content/BRIEF.md) — content arc surrounding the v0.1.0 launch (Frutero Club blog + derivatives). Owner: @mel. Status: active.
+- [build-in-public-alpha-version/](workstreams/build-in-public-alpha-version/BRIEF.md) — implementation arc for v0.1.x alpha (the 7 remaining stub commands + tests + release workflow). Source of build-in-public material that the content workstream(s) consume. Owner: @dumbleclaw. Status: active.
